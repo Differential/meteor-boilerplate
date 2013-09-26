@@ -1,12 +1,12 @@
 Router.configure
-  layout: "layout"
-  notFoundTemplate: "404"
+  layout: 'layout'
+  notFoundTemplate: '404'
   renderTemplates:
     header:
-      to: "header"
+      to: 'header'
     footer:
-      to: "footer"
+      to: 'footer'
 
 Router.map ->
-  @route "home",
-    path: "/"
+  @route 'home',
+    path: '/'
