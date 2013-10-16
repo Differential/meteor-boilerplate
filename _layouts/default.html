@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.repo }} | Differential</title>
+    <meta name="description" content="{{ page.desc }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script>
+      $(
+        $.get(
+          'https://api.github.com/repos/bedifferential/{{ page.repo }}/contributors',
+          function(data) {
+            _.each(
+              _.first(data, 40),
+              function(contributor) {
+                $('ul.contributors').append('<li><a href="https://github.com/' + contributor.login  + '"><img src="' +  contributor.avatar_url + '"></a></li>')
+              }
+            )
+          }
+        )
+      );
+    </script>
+    <link rel="icon" href="{{ site.baseurl }}/favicon.ico" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl}}/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ site.baseurl}}/css/font-awesome.css">
+    <link rel="stylesheet" href="{{ site.baseurl}}/css/global.css">
+  </head>
+  <body>
+
+    {% include header.html %}
+
+    <div class="main container">
+      <div class="row">
+        <div class="col-md-3">
+          <ul class="sidebar">
+            <li {% if page.url == "/index.html" %}class="active"{% endif %}><a href="{{site.baseurl}}/index.html">Documentation</a></li>
+            <li {% if page.url == "/changelog.html" %}class="active"{% endif %}><a href="{{site.baseurl}}/changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+</html>

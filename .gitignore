@@ -1,0 +1,4 @@
+.build*
+_site/
+.bundle/
+vendor/
