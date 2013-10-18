@@ -1,5 +1,5 @@
-name: accounts-entry
+name: meteor-boilerplate
 markdown: redcarpet
 pygments: true
-baseurl: /accounts-entry
+baseurl: /meteor-boilerplate
 exclude: ["vendor"]
