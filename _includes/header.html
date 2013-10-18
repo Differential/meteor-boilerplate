@@ -25,7 +25,7 @@
         <div class="version">{{ page.version }}</div>
         <a href="http://github.com/{{ page.username }}/{{ page.repo }}" class="bttn bttnBlue"><i class="icon-github"></i> View on Github</a>
 
-        <a href="https://github.com/{{ page.username }}/{{ page.repo }}/archive/master.zip" class="bttn bttnOrange"><i class="icon-download"></i> Download Zip ({{ page.version }})</a>
+        <a href="https://github.com/{{ page.username }}/{{ page.repo }}/archive/master.zip" class="bttn bttnOrange"><i class="icon-download"></i> Download Zip {% if page.version %}({{ page.version }}){% endif %}</a>
       </div>
       <div class="col-md-4 hidden-xs hidden-sm">
         <h3>Contributors</h3>
