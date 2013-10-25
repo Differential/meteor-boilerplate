@@ -1,17 +1,12 @@
 ---
 layout: default
 username: BeDifferential
-repo: meteor-boilerplate 
-version: 1.1.0
+repo: meteor-boilerplate
 desc: Boilerplate meteor app
 
 ---
 # Changelog
 
-### v 1.1.0
+### 10/25/2013
 
 Add Accounts-Entry package
-
-### v 1.0.0
-
-Initial Release
