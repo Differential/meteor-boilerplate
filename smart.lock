@@ -13,8 +13,8 @@
       },
       "accounts-entry": {
         "git": "https://github.com/BeDifferential/accounts-entry.git",
-        "tag": "v0.3.1",
-        "commit": "2b84dc445c1675a83e8931c92c415382320bcf52"
+        "tag": "v0.4.0",
+        "commit": "0c2986e47d8f00f4e0c87eb1038d9b898744c3ea"
       }
     }
   }
