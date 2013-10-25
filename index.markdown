@@ -2,7 +2,7 @@
 layout: default
 username: BeDifferential
 repo: meteor-boilerplate 
-version: 1.0.0
+version: 1.1.0
 desc: Boilerplate meteor app
 
 ---
