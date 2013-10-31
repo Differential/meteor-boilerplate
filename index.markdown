@@ -12,8 +12,8 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
 ## What's included
 
 * File Structure
-* Coffeescript
-* LESS
+* <a href="http://coffeescript.org/" target="_blank">Coffeescript</a>
+* <a href="http://lesscss.org/" target="_blank">LESS</a>
 * <a href="https://github.com/EventedMind/iron-router" target="_blank">Iron Router</a>
 * <a href="http://github.differential.io/accounts-entry" target="_blank">Accounts-Entry</a>
 * <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a>
