@@ -32,7 +32,6 @@ We have a common file structure we use across all of our meteorjs apps. The stru
 client
   └── stylesheets
     └── global.less
-    └── mixins.less
     └── variables.less
   └── views
     └── dashboard
