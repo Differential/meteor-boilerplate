@@ -10,5 +10,6 @@ preserve-inputs
 iron-router
 coffeescript
 less
+accounts-ui
 accounts-entry
 accounts-password
