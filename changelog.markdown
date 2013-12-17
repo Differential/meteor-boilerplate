@@ -7,6 +7,10 @@ desc: Boilerplate meteorjs app
 ---
 # Changelog
 
+### 12/17/2013
+
+Update to Bootstrap 3.0.3 and Font Awesome 4.0.3
+
 ### 11/11/2013
 
 Change Router config to work with latest IronRouter
