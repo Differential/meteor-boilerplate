@@ -56,7 +56,7 @@ server
 
 ## Responsive LESS Variables
 
-Includes 4 LESS variables to make responsive design super easy. Each variable (xs, sm, md, lg) coincides with Bootstrap media queries.
+Includes 4 LESS variables to make responsive design super easy. Each variable (xs, sm, md, lg) coincides with [Bootstrap media queries](http://getbootstrap.com/css/#responsive-utilities).
 
 {% highlight scss %}
 
