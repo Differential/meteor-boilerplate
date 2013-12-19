@@ -9,7 +9,7 @@ desc: Boilerplate meteorjs app
 
 ### 12/19/2013
 
-Enable server-side 404s.
+Enable server-side 404s and serve minimal 404 page.
 
 ### 12/17/2013
 
