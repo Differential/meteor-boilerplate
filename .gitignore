@@ -2,3 +2,5 @@
 _site/
 .bundle/
 vendor/
+.meteor
+packages

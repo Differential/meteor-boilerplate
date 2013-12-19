@@ -7,6 +7,10 @@ desc: Boilerplate meteorjs app
 ---
 # Changelog
 
+### 12/19/2013
+
+Enable server-side 404s.
+
 ### 12/17/2013
 
 Update to Bootstrap 3.0.3 and Font Awesome 4.0.3
