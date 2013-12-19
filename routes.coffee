@@ -9,5 +9,5 @@ Router.map ->
     path: '*'
     where: 'server'
     action: ->
-      @response.writeHead 404
-      @response.end()
+      @response.statusCode = 404
+      @response.end Handlebars.templates['404']()

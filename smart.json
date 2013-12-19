@@ -1,6 +1,7 @@
 {
   "packages": {
     "iron-router": {},
-    "accounts-entry": {}
+    "accounts-entry": {},
+    "handlebars-server": {}
   }
 }
