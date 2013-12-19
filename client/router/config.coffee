@@ -7,10 +7,3 @@ Router.configure
       to: 'header'
     footer:
       to: 'footer'
-
-Router.map ->
-  @route 'home',
-    path: '/'
-
-  @route 'dashboard',
-    path: '/dashboard'
