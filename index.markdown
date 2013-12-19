@@ -53,3 +53,19 @@ public
 server
 
 ```
+
+## Responsive LESS Variables
+
+Includes 4 LESS variables to make responsive design super easy. Each variable (xs, sm, md, lg) coincides with Bootstrap media queries.
+
+{% highlight scss %}
+
+h1 {
+  font-size: 24px;
+
+  @media @lg {
+    font-size: 36px;
+  }
+}
+
+{% endhighlight %}
