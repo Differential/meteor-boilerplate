@@ -11,6 +11,7 @@ desc: Boilerplate meteorjs app
 
 * Enable server-side 404s and serve minimal 404 page.
 * Change responsive LESS variables to match with Bootstrap.
+* Update Meteor to 0.7.0
 
 ### 12/17/2013
 
