@@ -9,21 +9,21 @@ desc: Boilerplate meteorjs app
 
 ### 12/19/2013
 
-*Enable server-side 404s and serve minimal 404 page.
-*Change responsive LESS variables to match with Bootstrap.
+* Enable server-side 404s and serve minimal 404 page.
+* Change responsive LESS variables to match with Bootstrap.
 
 ### 12/17/2013
 
-*Update to Bootstrap 3.0.3 and Font Awesome 4.0.3
+* Update to Bootstrap 3.0.3 and Font Awesome 4.0.3
 
 ### 11/11/2013
 
-*Change Router config to work with latest IronRouter
+* Change Router config to work with latest IronRouter
 
 ### 10/30/2013
 
-*Update to Font Awesome 4
+* Update to Font Awesome 4
 
 ### 10/25/2013
 
-*Add Accounts-Entry package
+* Add Accounts-Entry package
