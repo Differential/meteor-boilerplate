@@ -72,7 +72,7 @@ h1 {
 
 ## Search Engine Optimization
 
-Search engines rely on `<title>` and `<meta>` tags to read page titles and descriptions. You can specify these for each page in your app by including the following in the corresponding page's .coffee file. (Sample included in home.coffee)
+Search engines rely on `<title>` and `<meta>` tags to read page titles and descriptions. You can specify these for each page in your app by including the following in the corresponding page's `.coffee` file. (Sample included in home.coffee)
 
 {% highlight coffee %}
 
