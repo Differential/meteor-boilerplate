@@ -25,7 +25,7 @@ Make sure you have Meteor and [Meteorite](https://github.com/oortcloud/meteorite
 
 ## File structure
 
-We have a common file structure we use across all of our meteorjs apps. The structure keeps view-dependent files together (html, less, coffee).
+We have a common file structure we use across all of our meteorjs apps. The structure keeps view-dependent files together (`.html`, `.less`, `.coffee`).
 
 ```
 .meteor
@@ -56,7 +56,7 @@ server
 
 ## Responsive LESS Variables
 
-Includes 4 LESS variables to make responsive design super easy. Each variable (xs, sm, md, lg) coincides with [Bootstrap media queries](http://getbootstrap.com/css/#responsive-utilities).
+Includes 4 LESS variables to make responsive design super easy. Each variable (`xs`, `sm`, `md`, `lg`) coincides with [Bootstrap media queries](http://getbootstrap.com/css/#responsive-utilities).
 
 {% highlight scss %}
 
