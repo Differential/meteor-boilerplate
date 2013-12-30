@@ -7,6 +7,10 @@ desc: Boilerplate meteorjs app
 ---
 # Changelog
 
+### 12/30/2013
+
+* Add SEO page title & description to home.coffee
+
 ### 12/19/2013
 
 * Enable server-side 404s and serve minimal 404 page.
