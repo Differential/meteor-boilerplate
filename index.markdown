@@ -76,4 +76,9 @@ Search engines rely on `<title>` and `<meta>` tags to read page titles and descr
 
 {% highlight coffee %}
 
+Tempate.home.rendered = ->
+
+  document.title = "My New Meteor App"
+  $("<meta>", { name: "description", content: "Page description for My New Meteor App" }).appendTo "head"
+
 {% endhighlight %}
