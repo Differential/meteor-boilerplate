@@ -5,3 +5,5 @@ Meteor.startup ->
   AccountsEntry.config
     homeRoute: '/'
     dashboardRoute: '/dashboard'
+    language: 'en'
+    showSignupCode: false
