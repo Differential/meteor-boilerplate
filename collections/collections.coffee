@@ -1,0 +1,1 @@
+@Visitor = new Meteor.Collection('visitors')

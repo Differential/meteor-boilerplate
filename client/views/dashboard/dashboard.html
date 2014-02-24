@@ -1,2 +1,46 @@
 <template name="dashboard">
+  <div class="container dashboard">
+    <div class="row">
+      <h1><a href="/"><i class="fa fa-home"></i></a>  Key Statistics</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h4 class="bg-head">TOTAL VISITORS</h4>
+        <h2 class="bg-circle"><div class="bg-innercircle">{{visitorsCount}}</div></h2>
+      </div>
+
+      <div class="col-md-4">
+        <h4 class="bg-head">TOTAL VISITS</h4>
+        <h2 class="bg-circle"><div class="bg-innercircle">{{totalVisits}}</div></h2>
+      </div>
+
+      <div class="col-md-4">
+        <h4 class="bg-head">AVG VISITS / VISITOR</h4>
+        <h2 class="bg-circle"><div class="bg-innercircle">{{avgVisits}}</div></h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-striped">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Company</th>
+            <th># Visits</th>
+          </tr>
+
+          {{#each visitors}}
+          <tr>
+            <td>{{firstName}} {{lastName}}</td>
+            <td>{{email}}</td>
+            <td>{{company}}</td>
+            <td>{{visits.length}}</td>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+    </div>
+
+  </div>
 </template>

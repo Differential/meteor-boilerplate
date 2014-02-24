@@ -6,4 +6,4 @@ Meteor.startup ->
     homeRoute: '/'
     dashboardRoute: '/dashboard'
     language: 'en'
-    showSignupCode: false
+    showSignupCode: true
