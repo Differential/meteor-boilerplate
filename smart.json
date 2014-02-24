@@ -2,6 +2,7 @@
   "packages": {
     "iron-router": {},
     "accounts-entry": {},
-    "handlebars-server": {}
+    "handlebars-server": {},
+    "simple-form": {}
   }
 }
