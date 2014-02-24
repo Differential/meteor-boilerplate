@@ -1,26 +1,37 @@
-// MIXINS
+/* ===============================
+    LESS MIXINS
+   =============================== */
 
+// GRADIENTS
 
-.transition(@values: all 0.2s ease) {
-  -webkit-transition: @values;
-  -moz-transition: @values;
-  transition: @values;
+.verticalGradient(@topColor, @bottomColor) {
+  background-image: -ms-linear-gradient(top, @topColor 0%, @bottomColor 100%);
+  background-image: -moz-linear-gradient(top, @topColor 0%, @bottomColor 100%);
+  background-image: -o-linear-gradient(top, @topColor 0%, @bottomColor 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, @topColor), color-stop(1, @bottomColor));
+  background-image: -webkit-linear-gradient(top, @topColor 0%, @bottomColor 100%);
+  background-image: linear-gradient(to bottom, @topColor 0%, @bottomColor 100%);
 }
 
-.animatedDuration(@time) {
-  -webkit-animation-duration: @time;
-  -moz-animation-duration: @time;
-  animation-duration: @time;
+.horizontalGradient(@leftColor, @rightColor) {
+  background-image: -ms-linear-gradient(left, @leftColor 0%, @rightColor 100%);
+  background-image: -moz-linear-gradient(left, @leftColor 0%, @rightColor 100%);
+  background-image: -o-linear-gradient(left, @leftColor 0%, @rightColor 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, @leftColor), color-stop(1, @rightColor));
+  background-image: -webkit-linear-gradient(left, @leftColor 0%, @rightColor 100%);
+  background-image: linear-gradient(to right, @leftColor 0%, @rightColor 100%);
 }
 
-.animatedDelay(@time) {
-  -webkit-animation-delay: @time;
-  -moz-animation-delay: @time;
-  animation-delay: @time;
+
+// EFFECTS
+
+.transition(@arguments: all 0.2s ease) {
+  -webkit-transition: @arguments;
+  transition: @arguments;
 }
 
-.transform(@method) {
-  transform: @method;
-  -ms-transform: @method;
-  -webkit-transform: @method;
+.transform(@arguments) {
+  -webkit-transform: @arguments;
+  -ms-transform: @arguments;
+  transform: @arguments;
 }
