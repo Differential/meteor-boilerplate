@@ -1,7 +1,15 @@
 {
   "packages": {
-    "iron-router": {},
-    "accounts-entry": {},
-    "handlebars-server": {}
+    "iron-router": {
+      "git": "git@github.com:EventedMind/iron-router.git",
+      "branch": "blaze-integration"
+    },
+    "accounts-entry": {
+      "git": "git@github.com:BeDifferential/accounts-entry.git",
+      "branch": "blaze"
+    },
+    "handlebars-server": {
+      "git": "git@github.com:EventedMind/meteor-handlebars-server.git"
+    }
   }
 }
