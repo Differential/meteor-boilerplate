@@ -10,6 +10,7 @@
     },
     "handlebars-server": {
       "git": "git@github.com:EventedMind/meteor-handlebars-server.git"
-    }
+    },
+    "blaze-layout": {}
   }
 }
