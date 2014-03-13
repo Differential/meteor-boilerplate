@@ -2,8 +2,6 @@
   "packages": {
     "iron-router": {},
     "accounts-entry": {},
-    "handlebars-server": {},
-    "minimongoid": {},
-    "profile": {}
+    "handlebars-server": {}
   }
 }
