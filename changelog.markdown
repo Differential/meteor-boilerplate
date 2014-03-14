@@ -7,6 +7,10 @@ desc: Boilerplate meteorjs app
 ---
 # Changelog
 
+### 3/14/14
+
+* Update to Bootstrap 3.1.1
+
 ### 12/30/2013
 
 * Add SEO page title & description to home.coffee
