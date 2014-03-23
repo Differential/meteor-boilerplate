@@ -4,7 +4,7 @@
     "basePackages": {
       "iron-router": {
         "git": "git@github.com:EventedMind/iron-router.git",
-        "branch": "blaze-integration"
+        "branch": "dev"
       },
       "accounts-entry": {
         "git": "git@github.com:BeDifferential/accounts-entry.git",
@@ -19,33 +19,33 @@
     "packages": {
       "iron-router": {
         "git": "git@github.com:EventedMind/iron-router.git",
-        "branch": "blaze-integration",
-        "commit": "f8ffd44bceacc6a55f4ebcc218c072f5a18138b4"
+        "branch": "dev",
+        "commit": "3cfa4c618f6d6dffd209b4c0cb0f1d37c5223c09"
       },
       "accounts-entry": {
         "git": "git@github.com:BeDifferential/accounts-entry.git",
         "branch": "blaze",
-        "commit": "945106cf7779f92af128b563faf31c5ce5d82703"
+        "commit": "825383154cae1ab7b20f6a634570c02bb3086e28"
       },
       "handlebars-server": {
         "git": "git@github.com:EventedMind/meteor-handlebars-server.git",
         "branch": "master",
-        "commit": "ffb73682cbc4b8d5068b05f4344901b050ce06c9"
+        "commit": "1b72c4e9d82af66293e50be4516c487d15d97464"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.1",
-        "commit": "f52f416d6277f27b11832355298553e46b8cc6fd"
+        "branch": "master",
+        "commit": "2664f817844fba0fab0455a79bc62782c9091ad0"
       },
       "just-i18n": {
         "git": "https://github.com/subhog/meteor-just-i18n.git",
-        "tag": "v0.2.1",
-        "commit": "30746ec790ca0962fe232fa7c3e56f8585ba88fd"
+        "tag": "v0.2.2",
+        "commit": "90dfb52ab1c643d3fee76460a6a9083b1878d317"
       },
       "accounts-t9n": {
         "git": "git@github.com:BeDifferential/meteor-accounts-t9n.git",
         "branch": "master",
-        "commit": "f8b5f1784a984733da89443faef89effefcf7667"
+        "commit": "c3bbafccbd6f368aa2de47f45737a2e20334fc43"
       }
     }
   }
