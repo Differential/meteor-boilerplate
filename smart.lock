@@ -20,7 +20,7 @@
       "iron-router": {
         "git": "git@github.com:EventedMind/iron-router.git",
         "branch": "dev",
-        "commit": "3cfa4c618f6d6dffd209b4c0cb0f1d37c5223c09"
+        "commit": "1f65add04c5a83c2d8ebf750953c30e92a78d913"
       },
       "accounts-entry": {
         "git": "git@github.com:BeDifferential/accounts-entry.git",
@@ -45,7 +45,7 @@
       "accounts-t9n": {
         "git": "git@github.com:BeDifferential/meteor-accounts-t9n.git",
         "branch": "master",
-        "commit": "c3bbafccbd6f368aa2de47f45737a2e20334fc43"
+        "commit": "c8a67366c652e0233588ed63dd92c517cb7a8806"
       }
     }
   }
