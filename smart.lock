@@ -8,7 +8,7 @@
       },
       "accounts-entry": {
         "git": "git@github.com:BeDifferential/accounts-entry.git",
-        "branch": "blaze"
+        "branch": "master"
       },
       "handlebars-server": {
         "git": "git@github.com:EventedMind/meteor-handlebars-server.git",
@@ -24,8 +24,8 @@
       },
       "accounts-entry": {
         "git": "git@github.com:BeDifferential/accounts-entry.git",
-        "branch": "blaze",
-        "commit": "825383154cae1ab7b20f6a634570c02bb3086e28"
+        "branch": "master",
+        "commit": "759d6f3bcd0ddfcab0fbc6b55a61bfad4cb5019c"
       },
       "handlebars-server": {
         "git": "git@github.com:EventedMind/meteor-handlebars-server.git",
@@ -39,13 +39,13 @@
       },
       "just-i18n": {
         "git": "https://github.com/subhog/meteor-just-i18n.git",
-        "tag": "v0.2.2",
-        "commit": "90dfb52ab1c643d3fee76460a6a9083b1878d317"
+        "tag": "v0.1.1",
+        "commit": "ce88ac66c0dc107dc2da93ce152616115838101f"
       },
       "accounts-t9n": {
-        "git": "git@github.com:BeDifferential/meteor-accounts-t9n.git",
-        "branch": "master",
-        "commit": "c8a67366c652e0233588ed63dd92c517cb7a8806"
+        "git": "https://github.com/softwarerero/meteor-accounts-t9n.git",
+        "tag": "v0.0.2",
+        "commit": "408e3a037114cb72163073110e2121e3d548c1a2"
       }
     }
   }
