@@ -6,7 +6,7 @@
     },
     "accounts-entry": {
       "git": "git@github.com:BeDifferential/accounts-entry.git",
-      "branch": "blaze"
+      "branch": "master"
     },
     "handlebars-server": {
       "git": "git@github.com:EventedMind/meteor-handlebars-server.git"
