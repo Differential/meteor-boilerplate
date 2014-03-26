@@ -1,6 +1,6 @@
 ---
 layout: default
-username: BeDifferential
+username: Differential
 repo: meteor-boilerplate
 desc: Boilerplate meteorjs app
 

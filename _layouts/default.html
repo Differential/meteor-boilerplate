@@ -12,7 +12,7 @@
     <script>
       $(
         $.get(
-          'https://api.github.com/repos/bedifferential/{{ page.repo }}/contributors',
+          'https://api.github.com/repos/differential/{{ page.repo }}/contributors',
           function(data) {
             _.each(
               _.first(data, 40),
