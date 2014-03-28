@@ -2,10 +2,7 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {
-        "git": "git@github.com:EventedMind/iron-router.git",
-        "branch": "dev"
-      },
+      "iron-router": {},
       "accounts-entry": {
         "git": "git@github.com:BeDifferential/accounts-entry.git",
         "branch": "master"
@@ -18,14 +15,14 @@
     },
     "packages": {
       "iron-router": {
-        "git": "git@github.com:EventedMind/iron-router.git",
-        "branch": "dev",
-        "commit": "1f65add04c5a83c2d8ebf750953c30e92a78d913"
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.0",
+        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
       },
       "accounts-entry": {
         "git": "git@github.com:BeDifferential/accounts-entry.git",
         "branch": "master",
-        "commit": "759d6f3bcd0ddfcab0fbc6b55a61bfad4cb5019c"
+        "commit": "7fb0e8e745852feb441661285207302bfa1e8441"
       },
       "handlebars-server": {
         "git": "git@github.com:EventedMind/meteor-handlebars-server.git",
@@ -34,18 +31,18 @@
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "branch": "master",
-        "commit": "2664f817844fba0fab0455a79bc62782c9091ad0"
+        "tag": "v0.2.2",
+        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
       },
       "just-i18n": {
         "git": "https://github.com/subhog/meteor-just-i18n.git",
-        "tag": "v0.1.1",
-        "commit": "ce88ac66c0dc107dc2da93ce152616115838101f"
+        "tag": "v0.2.4",
+        "commit": "91decfcf5b3b5e67f202a67658350b862330bf3d"
       },
       "accounts-t9n": {
-        "git": "https://github.com/softwarerero/meteor-accounts-t9n.git",
-        "tag": "v0.0.2",
-        "commit": "408e3a037114cb72163073110e2121e3d548c1a2"
+        "git": "https://github.com/Differential/meteor-accounts-t9n.git",
+        "branch": "fix-just-i18n",
+        "commit": "0e3f96d189b8cac3813b1f5a20a59115881f628d"
       }
     }
   }

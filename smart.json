@@ -1,8 +1,6 @@
 {
   "packages": {
     "iron-router": {
-      "git": "git@github.com:EventedMind/iron-router.git",
-      "branch": "dev"
     },
     "accounts-entry": {
       "git": "git@github.com:BeDifferential/accounts-entry.git",
