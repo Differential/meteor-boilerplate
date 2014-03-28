@@ -1,0 +1,59 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "iron-router": {},
+      "accounts-entry": {
+        "git": "https://github.com/Differential/accounts-entry.git",
+        "branch": "master"
+      },
+      "handlebars-server": {
+        "git": "git@github.com:EventedMind/meteor-handlebars-server.git",
+        "branch": "master"
+      },
+      "minimongoid": {}
+    },
+    "packages": {
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.0",
+        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
+      },
+      "accounts-entry": {
+        "git": "https://github.com/Differential/accounts-entry.git",
+        "branch": "master",
+        "commit": "7fb0e8e745852feb441661285207302bfa1e8441"
+      },
+      "handlebars-server": {
+        "git": "git@github.com:EventedMind/meteor-handlebars-server.git",
+        "branch": "master",
+        "commit": "1b72c4e9d82af66293e50be4516c487d15d97464"
+      },
+      "minimongoid": {
+        "git": "https://github.com/Exygy/minimongoid.git",
+        "tag": "v0.8.3",
+        "commit": "8a4849426f1775f9886f303067e50877696fae43"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.2",
+        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+      },
+      "just-i18n": {
+        "git": "https://github.com/subhog/meteor-just-i18n.git",
+        "tag": "v0.2.4",
+        "commit": "91decfcf5b3b5e67f202a67658350b862330bf3d"
+      },
+      "accounts-t9n": {
+        "git": "https://github.com/Differential/meteor-accounts-t9n.git",
+        "branch": "fix-just-i18n",
+        "commit": "0e3f96d189b8cac3813b1f5a20a59115881f628d"
+      },
+      "underscore-string-latest": {
+        "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
+        "tag": "v2.3.3",
+        "commit": "4a5d70eee48fbd90a6e6fc78747250d704a0b3bb"
+      }
+    }
+  }
+}

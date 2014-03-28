@@ -1,8 +1,13 @@
 {
   "packages": {
     "iron-router": {},
-    "accounts-entry": {},
-    "handlebars-server": {},
+    "accounts-entry": {
+      "git": "https://github.com/Differential/accounts-entry.git",
+      "branch": "master"
+    },
+    "handlebars-server": {
+      "git": "git@github.com:EventedMind/meteor-handlebars-server.git"
+    },
     "minimongoid": {}
   }
 }
