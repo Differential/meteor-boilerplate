@@ -22,7 +22,7 @@
       "accounts-entry": {
         "git": "https://github.com/Differential/accounts-entry.git",
         "branch": "master",
-        "commit": "7fb0e8e745852feb441661285207302bfa1e8441"
+        "commit": "f9abbc5f77abaa3f3cb22f343cd19ab9482003ff"
       },
       "handlebars-server": {
         "git": "git@github.com:EventedMind/meteor-handlebars-server.git",
@@ -39,15 +39,10 @@
         "tag": "v0.2.2",
         "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
       },
-      "just-i18n": {
-        "git": "https://github.com/subhog/meteor-just-i18n.git",
-        "tag": "v0.2.4",
-        "commit": "91decfcf5b3b5e67f202a67658350b862330bf3d"
-      },
       "accounts-t9n": {
-        "git": "https://github.com/Differential/meteor-accounts-t9n.git",
-        "branch": "fix-just-i18n",
-        "commit": "0e3f96d189b8cac3813b1f5a20a59115881f628d"
+        "git": "https://github.com/softwarerero/meteor-accounts-t9n.git",
+        "tag": "v0.0.3",
+        "commit": "d1710f979d6955459d9ce0374df81d22c3c6a6ab"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
