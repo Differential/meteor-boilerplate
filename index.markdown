@@ -1,6 +1,6 @@
 ---
 layout: default
-username: BeDifferential
+username: Differential
 repo: meteor-boilerplate
 desc: Boilerplate meteorjs app
 
@@ -16,8 +16,8 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
 * <a href="http://lesscss.org/" target="_blank">LESS</a>
 * <a href="https://github.com/EventedMind/iron-router" target="_blank">Iron Router</a>
 * <a href="http://github.differential.io/accounts-entry" target="_blank">Accounts-Entry</a>
-* <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a>
-* <a href="http://fontawesome.io/" target="_blank">Font Awesome 4</a>
+* <a href="http://getbootstrap.com" target="_blank">Bootstrap 3.1.1</a>
+* <a href="http://fontawesome.io/" target="_blank">Font Awesome 4.0.3</a>
 
 ## Installation
 
@@ -30,28 +30,38 @@ We have a common file structure we use across all of our meteorjs apps. The stru
 ```
 .meteor
 client
+  ├── accounts
+  ├── compatibility
+  ├── router
   └── stylesheets
-    └── global.less
+    └── lib
+      ├── bootstrap.css
+      └── font-awesome.css
+    ├── global.less
+    ├── mixins.less
     └── variables.less
   └── views
     └── dashboard
       ├── dashboard.html
-      ├── dashboard.less
-      └── dashboard.coffee
+      └── dashboard.less
     └── home
       ├── home.html
       ├── home.less
       └── home.coffee
-    └── index.html
-    └── header.html
-    └── footer.html
+    ├── footer.html
+    ├── header.html
+    ├── index.html
+    └── loading.html
 collections
+  └── user.coffee
 packages
 public
   ├── fonts
-  └── img
+  └── favicon.ico
 server
-
+  ├── views
+  ├── accounts.coffee
+  └── publications.coffee
 ```
 
 ## Responsive LESS Variables
