@@ -30,28 +30,38 @@ We have a common file structure we use across all of our meteorjs apps. The stru
 ```
 .meteor
 client
+  ├── accounts
+  ├── compatibility
+  ├── router
   └── stylesheets
-    └── global.less
+    └── lib
+      ├── bootstrap.css
+      └── font-awesome.css
+    ├── global.less
+    ├── mixins.less
     └── variables.less
   └── views
     └── dashboard
       ├── dashboard.html
-      ├── dashboard.less
-      └── dashboard.coffee
+      └── dashboard.less
     └── home
       ├── home.html
       ├── home.less
       └── home.coffee
-    └── index.html
-    └── header.html
-    └── footer.html
+    ├── footer.html
+    ├── header.html
+    ├── index.html
+    └── loading.html
 collections
+  └── user.coffee
 packages
 public
   ├── fonts
-  └── img
+  └── favicon.ico
 server
-
+  ├── views
+  ├── accounts.coffee
+  └── publications.coffee
 ```
 
 ## Responsive LESS Variables
