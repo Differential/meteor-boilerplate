@@ -1,0 +1,13 @@
+{% if page.url == "/changelog.html" %}
+  <script>
+    Flatdoc.run({
+      fetcher: Flatdoc.github('Differential/meteor-boilerplate', 'changelog.md')
+    });
+  </script>
+{% else %}
+  <script>
+    Flatdoc.run({
+      fetcher: Flatdoc.github('Differential/meteor-boilerplate')
+    });
+  </script>
+{% endif %}

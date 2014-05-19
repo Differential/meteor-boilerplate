@@ -27,22 +27,30 @@
     <link rel="icon" href="{{ site.baseurl }}/favicon.ico" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ site.baseurl}}/css/bootstrap.css">
-    <link rel="stylesheet" href="{{ site.baseurl}}/css/font-awesome.css">
-    <link rel="stylesheet" href="{{ site.baseurl}}/css/syntax.css">
-    <link rel="stylesheet" href="{{ site.baseurl}}/css/global.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/global.css">
+
+    <!-- Flatdoc -->
+    <script src='http://rstacruz.github.io/flatdoc/v/0.8.1/legacy.js'></script>
+    <script src='http://rstacruz.github.io/flatdoc/v/0.8.1/flatdoc.js'></script>
+    <!-- Initializer -->
+    {% include settings.html %}
+
   </head>
-  <body>
+  <body role='flatdoc'>
 
     {% include header.html %}
 
     <div class="main container">
       <div class="row">
         <div class="col-md-3">
+          <!-- <div role='flatdoc-menu'></div> -->
           {% include sidebar.html %}
         </div>
         <div class="col-md-9">
-          {{ content }}
+          <div role='flatdoc-content'></div>
         </div>
       </div>
     </div>
