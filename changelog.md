@@ -1,5 +1,9 @@
 # Changelog
 
+### 5/29/14
+
+* Update to Font Awesome 4.1.0
+
 ### 3/14/14
 
 * Update to Bootstrap 3.1.1
