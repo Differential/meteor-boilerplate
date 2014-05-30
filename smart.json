@@ -6,7 +6,7 @@
       "branch": "master"
     },
     "handlebars-server": {
-      "git": "git@github.com:EventedMind/meteor-handlebars-server.git"
+      "git": "https://github.com/EventedMind/meteor-handlebars-server.git"
     },
     "minimongoid": {}
   }
