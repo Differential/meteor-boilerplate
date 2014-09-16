@@ -5,20 +5,32 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
 ## What's included
 
 * File Structure
-* <a href="http://coffeescript.org/" target="_blank">Coffeescript</a>
+* Collections:
+  * dburles:collection-helpers
+  * mrt:publish-with-relations
+* Router:
+  * <a href="https://github.com/EventedMind/iron-router" target="_blank">Iron Router</a>
+  * zimme:iron-router-active
+  * mrt:iron-router-progress
+  * manuelschoebel:ms-seo
+* Authentication
+  * <a href="http://github.differential.io/accounts-entry" target="_blank">Accounts-Entry</a>
+  * alanning:roles
 * <a href="http://lesscss.org/" target="_blank">LESS</a>
-* <a href="https://github.com/EventedMind/iron-router" target="_blank">Iron Router</a>
-* <a href="http://github.differential.io/accounts-entry" target="_blank">Accounts-Entry</a>
-* <a href="http://getbootstrap.com" target="_blank">Bootstrap 3.1.1</a>
-* <a href="http://fontawesome.io/" target="_blank">Font Awesome 4.1.0</a>
+  * <a href="http://getbootstrap.com" target="_blank">Bootstrap 3.1.1</a>
+  * <a href="http://fontawesome.io/" target="_blank">Font Awesome 4.1.0</a>
+* Misc:
+  * Moment.js
+  * Underscore.js
+  * Underscore string
 
 ## Installation
 
-Make sure you have Meteor and [Meteorite](https://github.com/oortcloud/meteorite/) installed, and then clone locally and run with `mrt`
+Simply clone and run `meteor`.
 
-## File structure
+## File Structure
 
-We have a common file structure we use across all of our meteorjs apps. The structure keeps view-dependent files together (`.html`, `.less`, `.coffee`).
+We have a common file structure we use across all of our meteorjs apps. The structure keeps view-dependent files together (`.html`, `.less`, `.js`).
 
 ```
 .meteor
@@ -36,17 +48,18 @@ client
   └── views
     └── dashboard
       ├── dashboard.html
-      └── dashboard.less
+      ├── dashboard.less
+      └── dashboard.js
     └── home
       ├── home.html
       ├── home.less
-      └── home.coffee
+      └── home.js
     ├── footer.html
     ├── header.html
     ├── index.html
     └── loading.html
 collections
-  └── user.coffee
+  └── items.js
 packages
 public
   ├── fonts
@@ -54,34 +67,10 @@ public
 server
   ├── views
   ├── accounts.coffee
-  └── publications.coffee
+  └── publications.js
 ```
 
-## Responsive LESS Variables
+## TODO
 
-Includes 4 LESS variables to make responsive design super easy. Each variable (`xs`, `sm`, `md`, `lg`) coincides with [Bootstrap media queries](http://getbootstrap.com/css/#responsive-utilities).
-
-```SCSS
-
-h1 {
-  font-size: 24px;
-
-  @media @lg {
-    font-size: 36px;
-  }
-}
-
-```
-
-## Search Engine Optimization
-
-Search engines rely on `<title>` and `<meta>` tags to read page titles and descriptions. You can specify these for each page in your app by including the following in the corresponding page's `.coffee` file. (Sample included in home.coffee)
-
-```CoffeeScript
-
-Tempate.home.rendered = ->
-
-  document.title = "My New Meteor App"
-  $("<meta>", { name: "description", content: "Page description for My New Meteor App" }).appendTo "head"
-
-```
+* Describe bootstrap file structure and customization
+* Describe SEO

@@ -3,14 +3,19 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-standard-app-packages
-autopublish
-insecure
+meteor-platform
 coffeescript
 less
 accounts-ui
 accounts-password
+alanning:roles
 iron:router
+zimme:iron-router-active
+mrt:iron-router-progress
+manuelschoebel:ms-seo
 cmather:handlebars-server@0.2.0
 joshowens:accounts-entry
 dburles:collection-helpers
+mrt:publish-with-relations
+mrt:moment
+mrt:underscore-string-latest

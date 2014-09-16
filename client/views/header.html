@@ -1,4 +1,31 @@
 <template name="header">
-  <header>
-  </header>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{pathFor 'home'}}">{{ siteTitle }}</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="main-nav">
+        <div class="navbar-right">
+          <a href="{{ pathFor 'entrySignIn' }}" class="btn btn-default navbar-btn">Log in</a>
+          <a href="{{ pathFor 'entrySignUp' }}" class="btn btn-primary navbar-btn">Sign up</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="{{ isActiveRoute 'home' }}"><a href="{{ pathFor 'home' }}">Home</a></li>
+          <li class="{{ isActivePath 'dashboard' }}"><a href="{{ pathFor 'dashboard' }}">Dashboard</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
 </template>

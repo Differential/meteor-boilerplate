@@ -1,25 +1,22 @@
-@import 'variables';
-@import 'mixins';
+// Bootstrap
+@import "./bootstrap/bootstrap.import.less";
 
-/* ===============================
-    GLOBAL STYLES
-   =============================== */
+@import './mixins.import.less';
+@import './variables.import.less';
 
-img {
-  max-width: 100%;
+// Bootstrap extensions
+// @import './bootstrap_ext/buttons.import.less';
+// @import './bootstrap_ext/type.import.less';
+
+// Misc Global Styles
+::-moz-selection { background: @brand-primary; color: #fff; text-shadow: none; }
+::selection { background: @brand-primary; color: #fff; text-shadow: none; }
+
+#iron-router-progress {
+  background-color: @brand-primary;
+  box-shadow: 0 0 5px @brand-primary;
 }
 
-
-// MISCELLANEOUS
-
-.browser-warning {
-  background: #BD3535;
-  color: #fff;
-  padding: 0.5em 0;
-  text-align: center;
-
-   a {
-    color: #fff;
-    text-decoration: underline;
-  }
+#iron-router-progress.spinner:before {
+  border-color: @brand-primary;
 }
