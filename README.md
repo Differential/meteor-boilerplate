@@ -31,7 +31,6 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
   * [Moment.js](http://momentjs.com/)
   * [Underscore.js](http://underscorejs.org/)
   * [Underscore.string](http://epeli.github.io/underscore.string/)
-  <!-- * [Underscore.inflection](https://github.com/jeremyruppel/underscore.inflection) -->
 
 ## <a name="installation"></a> Installation
 

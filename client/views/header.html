@@ -14,10 +14,23 @@
       </div>
 
       <div class="collapse navbar-collapse" id="main-nav">
-        <div class="navbar-right">
-          <a href="{{ pathFor 'entrySignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
-          <a href="{{ pathFor 'entrySignUp' }}" class="btn btn-primary navbar-btn">Register</a>
-        </div>
+        {{#if currentUser}}
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-user"></i> {{ currentUser.profile.name }} <i class="fa fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="{{ pathFor 'entrySignOut' }}" data-action="logout"><i class="fa fa-lock"></i> Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        {{else}}
+          <div class="navbar-right">
+            <a href="{{ pathFor 'entrySignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
+            <a href="{{ pathFor 'entrySignUp' }}" class="btn btn-primary navbar-btn">Register</a>
+          </div>
+        {{/if}}
 
         <ul class="nav navbar-nav navbar-right">
           <li class="{{ isActiveRoute 'home' }}"><a href="{{ pathFor 'home' }}"><i class="fa fa-home"></i> Home</a></li>
