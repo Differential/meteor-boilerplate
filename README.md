@@ -88,13 +88,32 @@ server/
 
 ## <a name="bootstrap-and-less"></a> Bootstrap and Less
 
-Most of Bootstrap can be customized with Less variables. If you look in `client/stylesheets/bootstrap/variables.import.less` you will see a slew of configuration variables that can be tweaked to drastically change the look and feel of your site without having to write a single line of CSS.
+The majority of Bootstrap can be customized with Less variables. If you look in `stylesheets/bootstrap/variables.import.less` you will see a slew of configuration variables that can be tweaked to drastically change the look and feel of your site without having to write a single line of CSS.
 
-If you'd like to override a feature of Bootstrap that can't be modified using variables, simply create a new file in `bootstrap-ext` named after the corresponding Bootstrap file, and make your changes there.
+However we should avoid modifying the core Bootstrap Less files (in case we want to update them later), and should instead override the variables in our own Less files.
+
+For example, to change the color of all primary buttons and links, simply add a `@brand-primary` variable to `stylesheets/variables.import.less`:
+
+```
+// variables.import.less
+@brand-primary: #DC681D;
+```
+
+If you'd like to override a feature of Bootstrap that can't be modified using variables, simply create a new file in the `bootstrap-ext` directory named after the corresponding Bootstrap Less file, and make your changes there.
+
+```
+// bootstrap-ext/buttons.import.less
+.btn {
+  text-transform: uppercase;
+}
+```
+
 
 ## <a name="seo"></a> SEO
 
 Page titles, meta descriptions and Facebook and Twitter meta tags are handled by the [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo) package. Global settings are configured in `seo.js`, while individual page settings are set at the route or controller level.
+
+* Note: the `spiderable` package will need to be installed and configured on your server in order for bots to read your meta tags.
 
 ```
 this.route('post', {
