@@ -1,12 +1,13 @@
 # meteor-boilerplate
 
-A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, Font Awesome, LESS and Coffeescript.
+A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, Font Awesome, LESS and more.
 
 ## What's included
 
-* File Structure
+* [File Structure](#file-structure)
 * Collections:
   * [dburles:collection-helpers](https://github.com/dburles/meteor-collection-helpers)
+  * [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
   * [mrt:publish-with-relations](https://github.com/svasva/meteor-publish-with-relations)
 * Router:
   * [Iron Router](https://github.com/EventedMind/iron-router)
@@ -28,7 +29,7 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
 
 Simply clone and run `meteor`.
 
-## File Structure
+## <a name="file-structure"></a> File Structure
 
 We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the root. Our structure also keeps view-dependent files together (`.html`, `.less`, `.js`).
 
