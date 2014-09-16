@@ -14,6 +14,7 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
   * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)
   * [mrt:iron-router-progress](https://github.com/Multiply/iron-router-progress/)
   * [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo)
+  * [fuatsengul:iron-router-auth](https://github.com/XpressiveCode/iron-router-auth)
 * Authentication
   * [joshowens:accounts-entry](https://github.com/Differential/accounts-entry/)
   * [alanning:roles](https://github.com/alanning/meteor-roles)
