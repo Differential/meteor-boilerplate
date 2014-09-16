@@ -16,6 +16,7 @@ cmather:handlebars-server@0.2.0
 coffeescript@1.0.3
 ctl-helper@1.0.3
 ctl@1.0.1
+dburles:collection-helpers@1.0.0
 ddp@1.0.8
 deps@1.0.3
 ejson@1.0.2
@@ -46,9 +47,9 @@ meteor@1.1.0
 minifiers@1.1.0
 minimongo@1.0.3
 mobile-status-bar@1.0.0
+mongo-livedata@1.0.4
 mongo@1.0.5
 mrt:accounts-t9n@0.0.13
-mrt:minimongoid@0.8.8
 mrt:underscore-string-latest@2.3.3
 npm-bcrypt@0.7.7
 observe-sequence@1.0.2
