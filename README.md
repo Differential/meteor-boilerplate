@@ -7,6 +7,7 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
 * [File Structure](#file-structure)
 * [Bootstrap and Less](#bootstrap-and-less)
 * [SEO](#seo)
+* [Favicons and Touch Icons](#favicons-and-touch-icons)
 
 ## <a name="included-packages"></a> Included Packages
 
@@ -89,3 +90,7 @@ If you'd like to override a feature of Bootstrap that can't be modified using va
 ## <a name="seo"></a> SEO
 
 Page titles, meta descriptions and Facebook and Twitter meta tags are handled by the [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo) package. Global settings are configured in `seo.js`, while individual page settings are set at the route or controller level.
+
+## <a name="favicons-and-touch-icons"></a> Favicons and Touch Icons
+
+Upload your image to http://realfavicongenerator.net/ and place the resulting images in `public/images/favicons`
