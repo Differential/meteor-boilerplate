@@ -3,6 +3,7 @@ accounts-password@1.0.1
 accounts-ui-unstyled@1.1.1
 accounts-ui@1.1.0
 alanning:roles@1.2.13
+anti:fake@0.4.1
 application-configuration@1.0.2
 autoupdate@1.1.0
 base64@1.0.0
@@ -17,6 +18,7 @@ coffeescript@1.0.3
 ctl-helper@1.0.3
 ctl@1.0.1
 dburles:collection-helpers@1.0.0
+dburles:factory@0.3.7
 ddp@1.0.8
 deps@1.0.3
 ejson@1.0.2

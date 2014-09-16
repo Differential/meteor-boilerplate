@@ -8,6 +8,7 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
 * [Bootstrap and Less](#bootstrap-and-less)
 * [SEO](#seo)
 * [Favicons and Touch Icons](#favicons-and-touch-icons)
+* [Seed Data](#seed-data)
 
 ## <a name="included-packages"></a> Included Packages
 
@@ -16,7 +17,7 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
   * [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
   * [mrt:publish-with-relations](https://github.com/svasva/meteor-publish-with-relations)
 * Router:
-  * [Iron Router](https://github.com/EventedMind/iron-router)
+  * [iron:router](https://github.com/EventedMind/iron-router)
   * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)
   * [mrt:iron-router-progress](https://github.com/Multiply/iron-router-progress/)
   * [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo)
@@ -24,6 +25,9 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
 * Authentication
   * [joshowens:accounts-entry](https://github.com/Differential/accounts-entry/)
   * [alanning:roles](https://github.com/alanning/meteor-roles)
+* Seed Data
+  * [dburles:factory](https://github.com/percolatestudio/meteor-factory)
+  * [anti:fake](https://github.com/anticoders/meteor-fake/)
 * [Less](http://lesscss.org)
   * [Bootstrap](http://getbootstrap.com)
   * [Font Awesome](http://fontawesome.io)
@@ -41,44 +45,45 @@ Simply fork or download a zip of this repo and run `meteor`.
 We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the root. Our structure also keeps view-dependent files together (`.html`, `.less`, `.js`).
 
 ```
-.meteor
-client
-  ├── accounts
-  ├── compatibility
-  ├── router
-  └── stylesheets
-    └── lib
-      ├── bootstrap.css
-      └── font-awesome.css
+.meteor/
+client/
+  ├── accounts/
+  ├── compatibility/
+  ├── router/
+  └── stylesheets/
+    ├── bootstrap/
+    ├── bootstrap-ext/
+    ├── font-awesome/
     ├── global.less
-    ├── mixins.less
-    └── variables.less
-  └── views
-    └── dashboard
+    ├── mixins.import.less
+    └── variables.import.less
+  └── views/
+    └── dashboard/
       ├── dashboard.html
       ├── dashboard.less
       └── dashboard.js
-    └── home
+    └── home/
       ├── home.html
       ├── home.less
       └── home.js
-    └── layouts
+    └── layouts/
       └── mainLayout.html
     ├── footer.html
     ├── header.html
     └── index.html
-collections
+collections/
   └── items.js
-packages
-public
-  ├── fonts
-  ├── images
+packages/
+public/
+  ├── fonts/
+  ├── images/
   └── favicon.ico
-server
-  ├── views
+server/
+  ├── views/
   ├── accounts.coffee
   ├── permissions.coffee
-  └── publications.js
+  ├── publications.js
+  └── seeds.js
 ```
 
 ## <a name="bootstrap-and-less"></a> Bootstrap and Less
@@ -91,6 +96,52 @@ If you'd like to override a feature of Bootstrap that can't be modified using va
 
 Page titles, meta descriptions and Facebook and Twitter meta tags are handled by the [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo) package. Global settings are configured in `seo.js`, while individual page settings are set at the route or controller level.
 
+```
+this.route('post', {
+  path: '/posts/:_id',
+  waitOn: function() {
+    return this.subscribe('post', params._id);
+  },
+  data: function() {
+    return {
+      post: Post.find({_id: params._id})
+    };
+  },
+  onAfterAction: function() {
+    if(this.ready()) {
+      SEO.set({
+        title: this.data().post.title + ' | ' + SEO.settings.title,
+        description: this.data().post.description
+      });
+    }
+  }
+});
+```
+
 ## <a name="favicons-and-touch-icons"></a> Favicons and Touch Icons
 
 Upload your image to http://realfavicongenerator.net/ and place the resulting images in `public/images/favicons`
+
+## Seed Data
+
+You can use the [dburles:factory](https://github.com/percolatestudio/meteor-factory) and [anti:fake](https://github.com/anticoders/meteor-fake/) packages to generate fake collection data for testing your UI. See `server/seeds.js` for an example:
+
+```
+Meteor.startup(function() {
+
+  Factory.define('item', Items, {
+    name: function() { return Fake.sentence(); },
+    rating: function() { return _.random(1, 5); }
+  });
+
+  if (Items.find({}).count() === 0) {
+
+    _(10).times(function(n) {
+      Factory.create('item');
+    });
+
+  }
+
+});
+
+```
