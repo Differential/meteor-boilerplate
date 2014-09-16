@@ -1,5 +1,6 @@
 Router.configure({
   layoutTemplate: 'mainLayout',
+
   yieldTemplates: {
     header: {
       to: 'header'
@@ -7,5 +8,9 @@ Router.configure({
     footer: {
       to: 'footer'
     }
+  },
+
+  onAfterAction: function() {
+    $(document).scrollTop(0);
   }
 });

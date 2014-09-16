@@ -63,10 +63,11 @@ client
       ├── home.html
       ├── home.less
       └── home.js
+    └── layouts
+      └── mainLayout.html
     ├── footer.html
     ├── header.html
-    ├── index.html
-    └── loading.html
+    └── index.html
 collections
   └── items.js
 packages
