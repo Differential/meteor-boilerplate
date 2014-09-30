@@ -5,7 +5,6 @@
 
 standard-app-packages
 autopublish
-insecure
 coffeescript
 less
 accounts-ui
@@ -14,4 +13,5 @@ mrt:minimongoid@0.8.8
 iron:router
 cmather:handlebars-server@0.2.0
 joshowens:accounts-entry
+insecure
 
