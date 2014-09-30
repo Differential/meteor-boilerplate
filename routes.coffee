@@ -5,6 +5,11 @@ Router.map ->
   @route 'dashboard',
     path: '/dashboard'
 
+  @route 'profile',
+    path: '/profile'
+    data: ->
+      Meteor.user()
+
   @route 'notFound',
     path: '*'
     where: 'server'

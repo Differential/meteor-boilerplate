@@ -1,0 +1,43 @@
+<template name="profile">
+  <div class="profile">
+    <h2>Edit Profile</h2>
+    <form>
+      {{#each profileFields}}
+        {{> _profileField}}
+      {{/each}}
+      {{submit_button 'Update Profile'}}
+    </form>
+  </div>
+</template>
+
+<template name="_profileField">
+  {{#if isTextField}}
+    <div class="form_group">
+      {{#with profile}}
+        {{text_field ../name type=../type required=../required hint=../hint placeholder=../placeholder afterAddon=../afterAddon class="profileField"}}
+      {{/with}}
+    </div>
+  {{/if}}
+
+  {{#if isTextArea}}
+    <div class="form_group">
+      {{#with profile}}
+        {{text_area ../name type=../type required=../required hint=../hint placeholder=../placeholder afterAddon=../afterAddon class="profileField"}}
+      {{/with}}
+    </div>
+  {{/if}}
+
+  {{#if isCheckbox}}
+    <div class="checkbox">
+      {{#with profile}}
+        {{check_box name label=label required=required}}
+      {{/with}}
+    </div>
+  {{/if}}
+
+  {{#if isFileField }}
+    <div class="form_group">
+      {{> file_field object=profile field=name}}
+    </div>
+  {{/if}}
+</template>
