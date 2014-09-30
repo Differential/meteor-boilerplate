@@ -1,6 +1,7 @@
 # meteor-boilerplate
 
-A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, Font Awesome, LESS and Coffeescript.
+A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3,
+Font Awesome, LESS and Coffeescript.
 
 ## What's included
 
@@ -14,7 +15,15 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
 
 ## Installation
 
-Make sure you have Meteor and [Meteorite](https://github.com/oortcloud/meteorite/) installed, and then clone locally and run with `mrt`
+1. Clone this repo to `<yourapp>`
+
+  `% git clone https://github.com/Differential/meteor-boilerplate.git <yourapp>`
+
+2. Remove `.git`
+
+  `% cd <yourapp> && rm -rf .git`
+
+3. Start coding!
 
 ## File structure
 
@@ -31,8 +40,8 @@ client
       ├── bootstrap.css
       └── font-awesome.css
     ├── global.less
-    ├── mixins.less
-    └── variables.less
+    ├── mixins.import.less
+    └── variables.import.less
   └── views
     └── dashboard
       ├── dashboard.html
@@ -41,13 +50,16 @@ client
       ├── home.html
       ├── home.less
       └── home.coffee
+    └── profile
+      ├── profile.html
+      ├── profile.less
+      └── profile.coffee
     ├── footer.html
     ├── header.html
     ├── index.html
     └── loading.html
 collections
   └── user.coffee
-packages
 public
   ├── fonts
   └── favicon.ico
