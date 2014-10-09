@@ -76,12 +76,12 @@ collections/
 packages/
 public/
   ├── fonts/
-  ├── images/
-  └── favicon.ico
+  └── images/
 server/
   ├── views/
-  ├── accounts.coffee
-  ├── permissions.coffee
+  ├── accounts.js
+  ├── email.js
+  ├── permissions.js
   ├── publications.js
   └── seeds.js
 ```
