@@ -17,6 +17,7 @@ cmather:handlebars-server@0.2.0
 coffeescript@1.0.3
 ctl-helper@1.0.3
 ctl@1.0.1
+cunneen:mailgun@0.9.1
 dburles:collection-helpers@1.0.0
 dburles:factory@0.3.7
 ddp@1.0.9

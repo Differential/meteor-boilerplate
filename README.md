@@ -35,6 +35,7 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
   * [Moment.js](http://momentjs.com/)
   * [Underscore.js](http://underscorejs.org/)
   * [Underscore.string](http://epeli.github.io/underscore.string/)
+  * [cunneen:mailgun](https://github.com/cunneen/meteor-mailgun)
 
 ## <a name="installation"></a> Installation
 
