@@ -11,7 +11,6 @@ accounts-password
 alanning:roles
 iron:router
 zimme:iron-router-active
-mrt:iron-router-progress
 manuelschoebel:ms-seo
 cmather:handlebars-server@0.2.0
 joshowens:accounts-entry
