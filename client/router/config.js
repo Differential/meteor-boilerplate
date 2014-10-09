@@ -1,5 +1,6 @@
 Router.configure({
   layoutTemplate: 'mainLayout',
+  loadingTemplate: 'loading',
 
   yieldTemplates: {
     header: {
@@ -14,3 +15,5 @@ Router.configure({
     $(document).scrollTop(0);
   }
 });
+
+Router.onBeforeAction('loading');
