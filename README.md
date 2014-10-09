@@ -15,7 +15,7 @@ A starting point for meteorjs applications, includes Iron Router, Bootstrap 3, F
 * Collections:
   * [dburles:collection-helpers](https://github.com/dburles/meteor-collection-helpers)
   * [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
-  * [mrt:publish-with-relations](https://github.com/svasva/meteor-publish-with-relations)
+  * [reywood:publish-composite](https://github.com/englue/meteor-publish-composite)
 * Router:
   * [iron:router](https://github.com/EventedMind/iron-router)
   * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)

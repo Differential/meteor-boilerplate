@@ -16,11 +16,10 @@ manuelschoebel:ms-seo
 cmather:handlebars-server@0.2.0
 joshowens:accounts-entry
 dburles:collection-helpers
-mrt:publish-with-relations
+reywood:publish-composite
 mrt:moment
 mrt:underscore-string-latest
 matb33:collection-hooks
 fuatsengul:iron-router-auth
 dburles:factory
 anti:fake
-
