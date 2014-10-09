@@ -1,19 +1,42 @@
 # meteor-boilerplate
 
-A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3,
-Font Awesome, LESS and Coffeescript.
+A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, Font Awesome, LESS and more.
 
-## What's included
+* [Included Packages](#included-packages)
+* [Installation](#installation)
+* [File Structure](#file-structure)
+* [Bootstrap and Less](#bootstrap-and-less)
+* [SEO](#seo)
+* [Favicons and Touch Icons](#favicons-and-touch-icons)
+* [Seed Data](#seed-data)
 
-* File Structure
-* <a href="http://coffeescript.org/" target="_blank">Coffeescript</a>
-* <a href="http://lesscss.org/" target="_blank">LESS</a>
-* <a href="https://github.com/EventedMind/iron-router" target="_blank">Iron Router</a>
-* <a href="http://github.differential.io/accounts-entry" target="_blank">Accounts-Entry</a>
-* <a href="http://getbootstrap.com" target="_blank">Bootstrap 3.1.1</a>
-* <a href="http://fontawesome.io/" target="_blank">Font Awesome 4.1.0</a>
+## <a name="included-packages"></a> Included Packages
 
-## Installation
+* Collections:
+  * [dburles:collection-helpers](https://github.com/dburles/meteor-collection-helpers)
+  * [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
+  * [reywood:publish-composite](https://github.com/englue/meteor-publish-composite)
+* Router:
+  * [iron:router](https://github.com/EventedMind/iron-router)
+  * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)
+  * [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo)
+  * [fuatsengul:iron-router-auth](https://github.com/XpressiveCode/iron-router-auth)
+* Authentication
+  * [joshowens:accounts-entry](https://github.com/Differential/accounts-entry/)
+  * [alanning:roles](https://github.com/alanning/meteor-roles)
+* Seed Data
+  * [dburles:factory](https://github.com/percolatestudio/meteor-factory)
+  * [anti:fake](https://github.com/anticoders/meteor-fake/)
+* [Less](http://lesscss.org)
+  * [Bootstrap](http://getbootstrap.com)
+  * [Font Awesome](http://fontawesome.io)
+* Misc:
+  * [Moment.js](http://momentjs.com/)
+  * [Underscore.js](http://underscorejs.org/)
+  * [Underscore.string](http://epeli.github.io/underscore.string/)
+  * [cunneen:mailgun](https://github.com/cunneen/meteor-mailgun)
+
+## <a name="installation"></a> Installation
 
 1. Clone this repo to `<yourapp>`
 
@@ -25,75 +48,127 @@ Font Awesome, LESS and Coffeescript.
 
 3. Start coding!
 
-## File structure
+## <a name="file-structure"></a> File Structure
 
-We have a common file structure we use across all of our meteorjs apps. The structure keeps view-dependent files together (`.html`, `.less`, `.coffee`).
+We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the root. Our structure also keeps view-dependent files together (`.html`, `.less`, `.js`).
 
 ```
-.meteor
-client
-  ├── accounts
-  ├── compatibility
-  ├── router
-  └── stylesheets
-    └── lib
-      ├── bootstrap.css
-      └── font-awesome.css
+.meteor/
+client/
+  ├── accounts/
+  ├── compatibility/
+  ├── router/
+  └── stylesheets/
+    ├── bootstrap/
+    ├── bootstrap-ext/
+    ├── font-awesome/
     ├── global.less
     ├── mixins.import.less
     └── variables.import.less
-  └── views
-    └── dashboard
+  └── views/
+    └── dashboard/
       ├── dashboard.html
-      └── dashboard.less
-    └── home
+      ├── dashboard.less
+      └── dashboard.js
+    └── home/
       ├── home.html
       ├── home.less
-      └── home.coffee
-    └── profile
-      ├── profile.html
-      ├── profile.less
-      └── profile.coffee
+      └── home.js
+    └── layouts/
+      └── mainLayout.html
     ├── footer.html
     ├── header.html
-    ├── index.html
-    └── loading.html
-collections
-  └── user.coffee
-public
-  ├── fonts
-  └── favicon.ico
-server
-  ├── views
-  ├── accounts.coffee
-  └── publications.coffee
+    └── index.html
+collections/
+  └── items.js
+packages/
+public/
+  ├── fonts/
+  └── images/
+server/
+  ├── views/
+  ├── accounts.js
+  ├── email.js
+  ├── permissions.js
+  ├── publications.js
+  └── seeds.js
 ```
 
-## Responsive LESS Variables
+## <a name="bootstrap-and-less"></a> Bootstrap and Less
 
-Includes 4 LESS variables to make responsive design super easy. Each variable (`xs`, `sm`, `md`, `lg`) coincides with [Bootstrap media queries](http://getbootstrap.com/css/#responsive-utilities).
+The majority of Bootstrap can be customized with Less variables. If you look in `stylesheets/bootstrap/variables.import.less` you will see a slew of configuration variables that can be tweaked to drastically change the look and feel of your site without having to write a single line of CSS.
 
-```SCSS
+However we should avoid modifying the core Bootstrap Less files (in case we want to update them later), and should instead override the variables in our own Less files.
 
-h1 {
-  font-size: 24px;
+For example, to change the color of all primary buttons and links, simply add a `@brand-primary` variable to `stylesheets/variables.import.less`:
 
-  @media @lg {
-    font-size: 36px;
-  }
+```
+// variables.import.less
+@brand-primary: #DC681D;
+```
+
+If you'd like to override a feature of Bootstrap that can't be modified using variables, simply create a new file in the `bootstrap-ext` directory named after the corresponding Bootstrap Less file, and make your changes there.
+
+```
+// bootstrap-ext/buttons.import.less
+.btn {
+  text-transform: uppercase;
 }
-
 ```
 
-## Search Engine Optimization
 
-Search engines rely on `<title>` and `<meta>` tags to read page titles and descriptions. You can specify these for each page in your app by including the following in the corresponding page's `.coffee` file. (Sample included in home.coffee)
+## <a name="seo"></a> SEO
 
-```CoffeeScript
+Page titles, meta descriptions and Facebook and Twitter meta tags are handled by the [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo) package. Global settings are configured in `seo.js`, while individual page settings are set at the route or controller level.
 
-Tempate.home.rendered = ->
+* Note: the `spiderable` package will need to be installed and configured on your server in order for bots to read your meta tags.
 
-  document.title = "My New Meteor App"
-  $("<meta>", { name: "description", content: "Page description for My New Meteor App" }).appendTo "head"
+```
+this.route('post', {
+  path: '/posts/:_id',
+  waitOn: function() {
+    return this.subscribe('post', params._id);
+  },
+  data: function() {
+    return {
+      post: Post.find({_id: params._id})
+    };
+  },
+  onAfterAction: function() {
+    if(this.ready()) {
+      SEO.set({
+        title: this.data().post.title + ' | ' + SEO.settings.title,
+        description: this.data().post.description
+      });
+    }
+  }
+});
+```
+
+## <a name="favicons-and-touch-icons"></a> Favicons and Touch Icons
+
+Upload your image to http://realfavicongenerator.net/ and place the resulting images in `public/images/favicons`
+
+## Seed Data
+
+You can use the [dburles:factory](https://github.com/percolatestudio/meteor-factory) and [anti:fake](https://github.com/anticoders/meteor-fake/) packages to generate fake collection data for testing your UI. See `server/seeds.js` for an example:
+
+```
+Meteor.startup(function() {
+
+  Factory.define('item', Items, {
+    name: function() { return Fake.sentence(); },
+    rating: function() { return _.random(1, 5); }
+  });
+
+  if (Items.find({}).count() === 0) {
+
+    _(10).times(function(n) {
+      Factory.create('item');
+    });
+
+  }
+
+});
 
 ```

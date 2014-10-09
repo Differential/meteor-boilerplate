@@ -1,25 +1,25 @@
-@import 'variables.import.less';
-@import 'mixins.import.less';
+// Bootstrap
+@import "./bootstrap/bootstrap.import.less";
 
-/* ===============================
-    GLOBAL STYLES
-   =============================== */
+// Font Awesome
+@import "./font-awesome/font-awesome.import.less";
 
-img {
-  max-width: 100%;
-}
+@import './mixins.import.less';
+@import './variables.import.less';
 
+// Bootstrap extensions
+@import './bootstrap-ext/buttons.import.less';
+@import './bootstrap-ext/type.import.less';
 
-// MISCELLANEOUS
+// Misc Global Styles
+::-moz-selection { background: @brand-primary; color: #fff; text-shadow: none; }
+::selection { background: @brand-primary; color: #fff; text-shadow: none; }
 
-.browser-warning {
-  background: #BD3535;
-  color: #fff;
-  padding: 0.5em 0;
+.loading {
+  padding: 48px 0;
   text-align: center;
 
-   a {
-    color: #fff;
-    text-decoration: underline;
+  i {
+    color: @gray-lighter;
   }
 }
