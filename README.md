@@ -19,10 +19,9 @@ A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, F
 * Router:
   * [iron:router](https://github.com/EventedMind/iron-router)
   * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)
-  * [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo)
-  * [fuatsengul:iron-router-auth](https://github.com/XpressiveCode/iron-router-auth)
+  * [yasinuslu:blaze-meta](https://github.com/yasinuslu/blaze-meta)
 * Authentication
-  * [joshowens:accounts-entry](https://github.com/Differential/accounts-entry/)
+  * [splendido:accounts-templates-bootstrap](https://github.com/splendido/accounts-templates-bootstrap)
   * [alanning:roles](https://github.com/alanning/meteor-roles)
 * Seed Data
   * [dburles:factory](https://github.com/percolatestudio/meteor-factory)
@@ -50,14 +49,12 @@ A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, F
 
 ## <a name="file-structure"></a> File Structure
 
-We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the root. Our structure also keeps view-dependent files together (`.html`, `.less`, `.js`).
+We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directoy.
 
 ```
 .meteor/
 client/
-  ├── accounts/
   ├── compatibility/
-  ├── router/
   └── stylesheets/
     ├── bootstrap/
     ├── bootstrap-ext/
@@ -75,7 +72,7 @@ client/
       ├── home.less
       └── home.js
     └── layouts/
-      └── mainLayout.html
+      └── appLayout.html
     ├── footer.html
     ├── header.html
     └── index.html
@@ -116,15 +113,14 @@ If you'd like to override a feature of Bootstrap that can't be modified using va
 }
 ```
 
-
 ## <a name="seo"></a> SEO
 
-Page titles, meta descriptions and Facebook and Twitter meta tags are handled by the [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo) package. Global settings are configured in `seo.js`, while individual page settings are set at the route or controller level.
+Page titles, meta descriptions and Facebook and Twitter meta tags are handled by the [yasinuslu:blaze-meta](https://github.com/yasinuslu/blaze-meta) package. Global settings are configured in `both/router/meta.js`, while individual page settings are set at the controller level.
 
 * Note: the `spiderable` package will need to be installed and configured on your server in order for bots to read your meta tags.
 
 ```
-this.route('post', {
+PostsShowController = AppController.extend({
   path: '/posts/:_id',
   waitOn: function() {
     return this.subscribe('post', params._id);
@@ -136,10 +132,7 @@ this.route('post', {
   },
   onAfterAction: function() {
     if(this.ready()) {
-      SEO.set({
-        title: this.data().post.title + ' | ' + SEO.settings.title,
-        description: this.data().post.description
-      });
+      Meta.setTitle(this.data().post.title);
     }
   }
 });
