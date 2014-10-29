@@ -1,0 +1,21 @@
+{
+  "production" : {
+    "twitter" : {
+      "oauth_key" : "<oauth_key>",
+      "oauth_secret" : "<oauth_secret>",
+      "api_key" : "<api_key>"
+    }
+  },
+  "development" : {
+    "twitter" : {
+      "oauth_key" : "<oauth_key>",
+      "oauth_secret" : "<oauth_secret>",
+      "api_key" : "<api_key>"
+    }
+  },
+  "public" : {
+    "meta" : {
+      "title" : "Project Title"
+    }
+  }
+}
