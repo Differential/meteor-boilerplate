@@ -19,5 +19,5 @@ matb33:collection-hooks
 dburles:factory
 anti:fake
 cunneen:mailgun
-iron:router@1.0.0-rc.1
+iron:router@1.0.0
 yasinuslu:blaze-meta

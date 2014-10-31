@@ -49,7 +49,9 @@ A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, F
 
 ## <a name="file-structure"></a> File Structure
 
-We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directoy.
+> TODO: describe the new file structure and the logic behind it
+
+<!-- We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directoy.
 
 ```
 .meteor/
@@ -89,11 +91,13 @@ server/
   ├── permissions.js
   ├── publications.js
   └── seeds.js
-```
+``` -->
 
 ## <a name="bootstrap-and-less"></a> Bootstrap and Less
 
-The majority of Bootstrap can be customized with Less variables. If you look in `stylesheets/bootstrap/variables.import.less` you will see a slew of configuration variables that can be tweaked to drastically change the look and feel of your site without having to write a single line of CSS.
+> TODO: describe the new file structure and the logic behind it
+
+<!-- The majority of Bootstrap can be customized with Less variables. If you look in `stylesheets/bootstrap/variables.import.less` you will see a slew of configuration variables that can be tweaked to drastically change the look and feel of your site without having to write a single line of CSS.
 
 However we should avoid modifying the core Bootstrap Less files (in case we want to update them later), and should instead override the variables in our own Less files.
 
@@ -111,7 +115,7 @@ If you'd like to override a feature of Bootstrap that can't be modified using va
 .btn {
   text-transform: uppercase;
 }
-```
+``` -->
 
 ## <a name="seo"></a> SEO
 
