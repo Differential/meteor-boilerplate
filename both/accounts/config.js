@@ -1,6 +1,3 @@
-Meteor.startup(function(){
-  AccountsTemplates.init();
-});
-
-AccountsTemplates.configureRoute('signIn', {layoutTemplate: 'authLayout'});
-AccountsTemplates.configureRoute('signUp', {layoutTemplate: 'authLayout'});
+AccountsTemplates.configureRoute('signIn', {layoutTemplate: 'appLayout'});
+AccountsTemplates.configureRoute('signUp', {layoutTemplate: 'appLayout'});
+AccountsTemplates.configureRoute('ensureSignedIn', {layoutTemplate: 'appLayout'});
