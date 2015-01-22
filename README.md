@@ -19,10 +19,9 @@ A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, F
 * Router:
   * [iron:router](https://github.com/EventedMind/iron-router)
   * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)
-  * [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo)
-  * [fuatsengul:iron-router-auth](https://github.com/XpressiveCode/iron-router-auth)
+  * [yasinuslu:blaze-meta](https://github.com/yasinuslu/blaze-meta)
 * Authentication
-  * [joshowens:accounts-entry](https://github.com/Differential/accounts-entry/)
+  * [splendido:accounts-templates-bootstrap](https://github.com/splendido/accounts-templates-bootstrap)
   * [alanning:roles](https://github.com/alanning/meteor-roles)
 * Seed Data
   * [dburles:factory](https://github.com/percolatestudio/meteor-factory)
@@ -40,91 +39,55 @@ A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, F
 
 1. Clone this repo to `<yourapp>`
 
-  `% git clone https://github.com/Differential/meteor-boilerplate.git <yourapp>`
+  `git clone https://github.com/Differential/meteor-boilerplate.git <yourapp>`
 
 2. Remove `.git`
 
-  `% cd <yourapp> && rm -rf .git`
+  `cd <yourapp> && rm -rf .git`
 
 3. Start coding!
 
 ## <a name="file-structure"></a> File Structure
 
-We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the root. Our structure also keeps view-dependent files together (`.html`, `.less`, `.js`).
+We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directory. The `private` and `public` directories are for either private or public assets. 
 
-```
-.meteor/
-client/
-  ├── accounts/
-  ├── compatibility/
-  ├── router/
-  └── stylesheets/
-    ├── bootstrap/
-    ├── bootstrap-ext/
-    ├── font-awesome/
-    ├── global.less
-    ├── mixins.import.less
-    └── variables.import.less
-  └── views/
-    └── dashboard/
-      ├── dashboard.html
-      ├── dashboard.less
-      └── dashboard.js
-    └── home/
-      ├── home.html
-      ├── home.less
-      └── home.js
-    └── layouts/
-      └── mainLayout.html
-    ├── footer.html
-    ├── header.html
-    └── index.html
-collections/
-  └── items.js
-packages/
-public/
-  ├── fonts/
-  └── images/
-server/
-  ├── views/
-  ├── accounts.js
-  ├── email.js
-  ├── permissions.js
-  ├── publications.js
-  └── seeds.js
-```
+## <a name="bootstrap-and-less"></a> Bootstrap and LESS
 
-## <a name="bootstrap-and-less"></a> Bootstrap and Less
+The majority of Bootstrap can be customized with LESS variables. If you look in `client/stylesheets/base/lib/bootstrap/variables.import.less` you will see a slew of configuration variables that can be tweaked to drastically change the look and feel of your site without having to write a single line of CSS.
 
-The majority of Bootstrap can be customized with Less variables. If you look in `stylesheets/bootstrap/variables.import.less` you will see a slew of configuration variables that can be tweaked to drastically change the look and feel of your site without having to write a single line of CSS.
+However we should avoid modifying the core Bootstrap Less files (in case we want to update them later), and should instead override the variables in our own LESS files.
 
-However we should avoid modifying the core Bootstrap Less files (in case we want to update them later), and should instead override the variables in our own Less files.
-
-For example, to change the color of all primary buttons and links, simply add a `@brand-primary` variable to `stylesheets/variables.import.less`:
+For example, to change the color of all primary buttons and links, simply add a `@brand-primary` variable to `stylesheets/base/variables.import.less`:
 
 ```
 // variables.import.less
 @brand-primary: #DC681D;
 ```
 
-If you'd like to override a feature of Bootstrap that can't be modified using variables, simply create a new file in the `bootstrap-ext` directory named after the corresponding Bootstrap Less file, and make your changes there.
+If you'd like to override a feature of Bootstrap that can't be modified using variables, simply create a new file in the `client/stylesheets/components` directory named after the corresponding Bootstrap component (eg. `buttons` in this case), and make your changes there.
 
 ```
-// bootstrap-ext/buttons.import.less
+// buttons.import.less
 .btn {
   text-transform: uppercase;
 }
 ```
 
+After your file is ready, you need to import it into `client/stylesheets/base/global.less`. So, you would add in this statement:
+```
+@import '@{components}/buttons.import.less';
+```
+
+The reason that this is done is to avoid any issues when the LESS files are compiled into CSS. That way, if one component relies on another or you want a certain order for your components, you can avoid any issues.
 
 ## <a name="seo"></a> SEO
 
-Page titles, meta descriptions and Facebook and Twitter meta tags are handled by the [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo) package. Global settings are configured in `seo.js`, while individual page settings are set at the route or controller level.
+Page titles, meta descriptions and Facebook and Twitter meta tags are handled by the [yasinuslu:blaze-meta](https://github.com/yasinuslu/blaze-meta) package. Global settings are configured in `both/router/meta.js`, while individual page settings are set at the controller level.
 
 * Note: the `spiderable` package will need to be installed and configured on your server in order for bots to read your meta tags.
 
 ```
-this.route('post', {
+PostsShowController = AppController.extend({
   path: '/posts/:_id',
   waitOn: function() {
     return this.subscribe('post', params._id);
@@ -136,10 +99,7 @@ this.route('post', {
   },
   onAfterAction: function() {
     if(this.ready()) {
-      SEO.set({
-        title: this.data().post.title + ' | ' + SEO.settings.title,
-        description: this.data().post.description
-      });
+      Meta.setTitle(this.data().post.title);
     }
   }
 });

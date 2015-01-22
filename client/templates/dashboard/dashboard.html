@@ -1,0 +1,14 @@
+<template name="dashboard">
+  <div class="template-dashboard">
+    <div class="page-header">
+      <h1>Dashboard</h1>
+    </div>
+
+    <ul class="list-group">
+      {{#each items}}
+        <li class="list-group-item">{{ name }} <span class="label label-default">{{ rating }}</span></li>
+      {{/each}}
+    </ul>
+
+  </div>
+</template>
