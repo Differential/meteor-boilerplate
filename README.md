@@ -80,7 +80,7 @@ After your file is ready, you need to import it into `client/stylesheets/base/gl
 @import ‘@{components}/buttons.import.less’;
 ```
 
-The reason that this is done is to avoid any issues when the LESS compiler runs. That way, if one component relies on another or you want a certain order for your components, you can avoid any issues.
+The reason that this is done is to avoid any issues when the LESS files are compiled into CSS. That way, if one component relies on another or you want a certain order for your components, you can avoid any issues.
 
 ## <a name="seo"></a> SEO
 
