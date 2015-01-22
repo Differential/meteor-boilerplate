@@ -51,71 +51,36 @@ A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, F
 
 > TODO: describe the new file structure and the logic behind it
 
-<!-- We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directoy.
+<!-- We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directoy. -->
 
-```
-.meteor/
-client/
-  ├── compatibility/
-  └── stylesheets/
-    ├── bootstrap/
-    ├── bootstrap-ext/
-    ├── font-awesome/
-    ├── global.less
-    ├── mixins.import.less
-    └── variables.import.less
-  └── views/
-    └── dashboard/
-      ├── dashboard.html
-      ├── dashboard.less
-      └── dashboard.js
-    └── home/
-      ├── home.html
-      ├── home.less
-      └── home.js
-    └── layouts/
-      └── appLayout.html
-    ├── footer.html
-    ├── header.html
-    └── index.html
-collections/
-  └── items.js
-packages/
-public/
-  ├── fonts/
-  └── images/
-server/
-  ├── views/
-  ├── accounts.js
-  ├── email.js
-  ├── permissions.js
-  ├── publications.js
-  └── seeds.js
-``` -->
+## <a name="bootstrap-and-less"></a> Bootstrap and LESS
 
-## <a name="bootstrap-and-less"></a> Bootstrap and Less
+The majority of Bootstrap can be customized with LESS variables. If you look in `client/stylesheets/base/lib/bootstrap/variables.import.less` you will see a slew of configuration variables that can be tweaked to drastically change the look and feel of your site without having to write a single line of CSS.
 
-> TODO: describe the new file structure and the logic behind it
+However we should avoid modifying the core Bootstrap Less files (in case we want to update them later), and should instead override the variables in our own LESS files.
 
-<!-- The majority of Bootstrap can be customized with Less variables. If you look in `stylesheets/bootstrap/variables.import.less` you will see a slew of configuration variables that can be tweaked to drastically change the look and feel of your site without having to write a single line of CSS.
-
-However we should avoid modifying the core Bootstrap Less files (in case we want to update them later), and should instead override the variables in our own Less files.
-
-For example, to change the color of all primary buttons and links, simply add a `@brand-primary` variable to `stylesheets/variables.import.less`:
+For example, to change the color of all primary buttons and links, simply add a `@brand-primary` variable to `stylesheets/base/variables.import.less`:
 
 ```
 // variables.import.less
 @brand-primary: #DC681D;
 ```
 
-If you'd like to override a feature of Bootstrap that can't be modified using variables, simply create a new file in the `bootstrap-ext` directory named after the corresponding Bootstrap Less file, and make your changes there.
+If you'd like to override a feature of Bootstrap that can't be modified using variables, simply create a new file in the `components` directory named after the corresponding Bootstrap component (eg. a `buttons` in this case), and make your changes there.
 
 ```
-// bootstrap-ext/buttons.import.less
+// buttons.import.less
 .btn {
   text-transform: uppercase;
 }
-``` -->
+```
+
+After your file is ready, you need to import it into `client/stylesheets/base/global.less`. So, you would add in this statement:
+```
+@import ‘@{components}/buttons.import.less’;
+```
+
+The reason that this is done is to avoid any issues when the LESS compiler runs. That way, if one component relies on another or you want a certain order for your components, you can avoid any issues.
 
 ## <a name="seo"></a> SEO
 
