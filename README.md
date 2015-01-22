@@ -77,7 +77,7 @@ If you'd like to override a feature of Bootstrap that can't be modified using va
 
 After your file is ready, you need to import it into `client/stylesheets/base/global.less`. So, you would add in this statement:
 ```
-@import ‘@{components}/buttons.import.less’;
+@import '@{components}/buttons.import.less';
 ```
 
 The reason that this is done is to avoid any issues when the LESS files are compiled into CSS. That way, if one component relies on another or you want a certain order for your components, you can avoid any issues.
