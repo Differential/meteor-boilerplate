@@ -49,9 +49,7 @@ A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, F
 
 ## <a name="file-structure"></a> File Structure
 
-> TODO: describe the new file structure and the logic behind it
-
-<!-- We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directoy. -->
+We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directory. The `private` and `public` directories are for either private or public assets. 
 
 ## <a name="bootstrap-and-less"></a> Bootstrap and LESS
 
@@ -66,7 +64,7 @@ For example, to change the color of all primary buttons and links, simply add a 
 @brand-primary: #DC681D;
 ```
 
-If you'd like to override a feature of Bootstrap that can't be modified using variables, simply create a new file in the `components` directory named after the corresponding Bootstrap component (eg. a `buttons` in this case), and make your changes there.
+If you'd like to override a feature of Bootstrap that can't be modified using variables, simply create a new file in the `client/stylesheets/components` directory named after the corresponding Bootstrap component (eg. `buttons` in this case), and make your changes there.
 
 ```
 // buttons.import.less
