@@ -5,9 +5,6 @@ DashboardController = AppController.extend({
   data: {
     items: Items.find({})
   },
-  onBeforeAction: function (pause) {
-    AccountsTemplates.ensureSignedIn.call(this, pause);
-  },
   onAfterAction: function () {
     Meta.setTitle('Dashboard');
   }
