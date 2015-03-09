@@ -10,7 +10,7 @@ zimme:iron-router-active
 cmather:handlebars-server@0.2.0
 dburles:collection-helpers
 reywood:publish-composite
-mrt:moment
+momentjs:moment
 mrt:underscore-string-latest
 matb33:collection-hooks
 dburles:factory
