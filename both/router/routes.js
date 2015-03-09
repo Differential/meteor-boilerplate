@@ -2,4 +2,10 @@ Router.route('/', {
   name: 'home'
 });
 
-Router.route('/dashboard');
+Router.route('/dashboard', {
+  name: 'dashboard'
+});
+
+Router.plugin('ensureSignedIn', {
+  only: ['dashboard']
+});
