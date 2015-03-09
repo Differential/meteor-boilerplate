@@ -2,10 +2,11 @@
 
 A starting point for MeteorJS applications that use Material Design. Includes Iron Router, Materialize.css, AutoForm and more.
 
+For our Bootstrap version, see the [master branch](https://github.com/Differential/meteor-boilerplate/tree/master).
+
 * [Included Packages](#included-packages)
 * [Installation](#installation)
 * [File Structure](#file-structure)
-<!-- * [Bootstrap and Less](#bootstrap-and-less) -->
 * [SEO](#seo)
 * [Favicons and Touch Icons](#favicons-and-touch-icons)
 * [Seed Data](#seed-data)
@@ -53,35 +54,6 @@ A starting point for MeteorJS applications that use Material Design. Includes Ir
 ## <a name="file-structure"></a> File Structure
 
 We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directory. The `private` and `public` directories are for either private or public assets.
-
-<!-- ## <a name="bootstrap-and-less"></a> Bootstrap and LESS
-
-The majority of Bootstrap can be customized with LESS variables. If you look in `client/stylesheets/base/lib/bootstrap/variables.import.less` you will see a slew of configuration variables that can be tweaked to drastically change the look and feel of your site without having to write a single line of CSS.
-
-However we should avoid modifying the core Bootstrap Less files (in case we want to update them later), and should instead override the variables in our own LESS files.
-
-For example, to change the color of all primary buttons and links, simply add a `@brand-primary` variable to `stylesheets/base/variables.import.less`:
-
-```
-// variables.import.less
-@brand-primary: #DC681D;
-```
-
-If you'd like to override a feature of Bootstrap that can't be modified using variables, simply create a new file in the `client/stylesheets/components` directory named after the corresponding Bootstrap component (eg. `buttons` in this case), and make your changes there.
-
-```
-// buttons.import.less
-.btn {
-  text-transform: uppercase;
-}
-```
-
-After your file is ready, you need to import it into `client/stylesheets/base/global.less`. So, you would add in this statement:
-```
-@import '@{components}/buttons.import.less';
-```
-
-The reason that this is done is to avoid any issues when the LESS files are compiled into CSS. That way, if one component relies on another or you want a certain order for your components, you can avoid any issues. -->
 
 ## <a name="seo"></a> SEO
 
