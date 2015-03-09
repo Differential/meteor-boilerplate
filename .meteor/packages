@@ -4,9 +4,7 @@
 # but you can also edit it by hand.
 
 meteor-platform
-less
 accounts-password
-useraccounts:bootstrap
 alanning:roles
 zimme:iron-router-active
 cmather:handlebars-server@0.2.0
@@ -18,5 +16,10 @@ matb33:collection-hooks
 dburles:factory
 anti:fake
 cunneen:mailgun
-iron:router@1.0.0
+iron:router
 yasinuslu:blaze-meta
+materialize:materialize
+useraccounts:materialize
+aldeed:autoform
+aldeed:collection2
+gildaspk:autoform-materialize

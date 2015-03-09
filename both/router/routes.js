@@ -3,3 +3,7 @@ Router.route('/', {
 });
 
 Router.route('/dashboard');
+
+Router.route('/items/new', {
+  name: 'items.new'
+});

@@ -1,44 +1,35 @@
 <template name="_header">
+  <nav>
+    <div class="nav-wrapper">
+      <div class="container">
+        <a class="brand-logo" href="{{pathFor 'home'}}">Project Title</a>
 
-  <nav class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
-
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="{{pathFor 'home'}}">Project Title</a>
-      </div>
-
-      <div class="collapse navbar-collapse" id="main-nav">
-        {{#if currentUser}}
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-user"></i> {{ currentUser.profile.name }} <i class="fa fa-caret-down"></i>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#" data-action="logout"><i class="fa fa-lock"></i> Sign Out</a></li>
-              </ul>
-            </li>
-          </ul>
-        {{else}}
-          <div class="navbar-right">
-            <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
-            <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a>
-          </div>
-        {{/if}}
-
-        <ul class="nav navbar-nav navbar-right">
-          <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><i class="fa fa-home"></i> Home</a></li>
-          <li class="{{ isActiveRoute regex='dashboard' }}"><a href="{{ pathFor 'dashboard' }}"><i class="fa fa-gear"></i> Dashboard</a></li>
+        <ul class="right">
+          <li><a class="dropdown-button" href="#!" data-activates="user-dropdown"><i class="mdi-navigation-more-vert"></i></a></li>
         </ul>
-      </div>
 
+        <ul class="right hide-on-med-and-down">
+          <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}" title="Home"><i class="mdi-action-home"></i></a></li>
+          <li class="{{ isActiveRoute regex='dashboard' }}"><a href="{{ pathFor 'dashboard' }}" title="Dashboard"><i class="mdi-action-dashboard"></i></a></li>
+        </ul>
+
+        <ul id="user-dropdown" class="dropdown-content">
+          {{#if currentUser}}
+            <li><a href="#" data-action="logout"><i class="mdi-action-lock"></i> Sign Out</a></li>
+          {{else}}
+            <li><a href="{{ pathFor 'atSignIn' }}">Sign in</a></li>
+            <li><a href="{{ pathFor 'atSignUp' }}">Register</a></li>
+          {{/if}}
+        </ul>
+
+        <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+      </div>
     </div>
   </nav>
+
+  <ul id="nav-mobile" class="side-nav">
+    <li class="bold {{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}" title="Home"><i class="mdi-action-home"></i> Home</a></li>
+    <li class="bold {{ isActiveRoute regex='dashboard' }}"><a href="{{ pathFor 'dashboard' }}" title="Dashboard"><i class="mdi-action-dashboard"></i> Dashboard</a></li>
+  </ul>
 
 </template>

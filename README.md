@@ -1,34 +1,37 @@
-# meteor-boilerplate
+# Meteor Boilerplate - Material Design Version
 
-A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, Font Awesome, LESS and more.
+A starting point for MeteorJS applications that use Material Design. Includes Iron Router, Materialize.css, AutoForm and more.
 
 * [Included Packages](#included-packages)
 * [Installation](#installation)
 * [File Structure](#file-structure)
-* [Bootstrap and Less](#bootstrap-and-less)
+<!-- * [Bootstrap and Less](#bootstrap-and-less) -->
 * [SEO](#seo)
 * [Favicons and Touch Icons](#favicons-and-touch-icons)
 * [Seed Data](#seed-data)
 
 ## <a name="included-packages"></a> Included Packages
 
+* [Material Design](http://www.google.com/design/spec/material-design/introduction.html)
+  * [materialize:materialize](http://materializecss.com/)
+  * [useraccounts:materialize](https://github.com/meteor-useraccounts/materialize)
+  * [gildaspk:autoform-materialize](https://github.com/djhi/meteor-autoform-materialize/)
 * Collections:
   * [dburles:collection-helpers](https://github.com/dburles/meteor-collection-helpers)
   * [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
   * [reywood:publish-composite](https://github.com/englue/meteor-publish-composite)
+  * [aldeed:autoform](https://github.com/aldeed/meteor-autoform)
+  * [aldeed:collection2](https://github.com/aldeed/https://github.com/aldeed/meteor-collection2)
 * Router:
   * [iron:router](https://github.com/EventedMind/iron-router)
   * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)
   * [yasinuslu:blaze-meta](https://github.com/yasinuslu/blaze-meta)
 * Authentication
-  * [splendido:accounts-templates-bootstrap](https://github.com/splendido/accounts-templates-bootstrap)
+  * [Meteor User Accounts](https://github.com/meteor-useraccounts/core)
   * [alanning:roles](https://github.com/alanning/meteor-roles)
 * Seed Data
   * [dburles:factory](https://github.com/percolatestudio/meteor-factory)
   * [anti:fake](https://github.com/anticoders/meteor-fake/)
-* [Less](http://lesscss.org)
-  * [Bootstrap](http://getbootstrap.com)
-  * [Font Awesome](http://fontawesome.io)
 * Misc:
   * [Moment.js](http://momentjs.com/)
   * [Underscore.js](http://underscorejs.org/)
@@ -49,9 +52,9 @@ A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, F
 
 ## <a name="file-structure"></a> File Structure
 
-We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directory. The `private` and `public` directories are for either private or public assets. 
+We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directory. The `private` and `public` directories are for either private or public assets.
 
-## <a name="bootstrap-and-less"></a> Bootstrap and LESS
+<!-- ## <a name="bootstrap-and-less"></a> Bootstrap and LESS
 
 The majority of Bootstrap can be customized with LESS variables. If you look in `client/stylesheets/base/lib/bootstrap/variables.import.less` you will see a slew of configuration variables that can be tweaked to drastically change the look and feel of your site without having to write a single line of CSS.
 
@@ -78,7 +81,7 @@ After your file is ready, you need to import it into `client/stylesheets/base/gl
 @import '@{components}/buttons.import.less';
 ```
 
-The reason that this is done is to avoid any issues when the LESS files are compiled into CSS. That way, if one component relies on another or you want a certain order for your components, you can avoid any issues.
+The reason that this is done is to avoid any issues when the LESS files are compiled into CSS. That way, if one component relies on another or you want a certain order for your components, you can avoid any issues. -->
 
 ## <a name="seo"></a> SEO
 

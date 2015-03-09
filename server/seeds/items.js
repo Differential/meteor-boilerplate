@@ -2,6 +2,7 @@ Meteor.startup(function() {
 
   Factory.define('item', Items, {
     name: function() { return Fake.sentence(); },
+    description: function() { return Fake.paragraph(); },
     rating: function() { return _.random(1, 5); }
   });
 
