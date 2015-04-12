@@ -59,14 +59,14 @@ However we should avoid modifying the core Bootstrap Less files (in case we want
 
 For example, to change the color of all primary buttons and links, simply add a `@brand-primary` variable to `stylesheets/base/variables.import.less`:
 
-```
+```less
 // variables.import.less
 @brand-primary: #DC681D;
 ```
 
 If you'd like to override a feature of Bootstrap that can't be modified using variables, simply create a new file in the `client/stylesheets/components` directory named after the corresponding Bootstrap component (eg. `buttons` in this case), and make your changes there.
 
-```
+```less
 // buttons.import.less
 .btn {
   text-transform: uppercase;
@@ -74,7 +74,7 @@ If you'd like to override a feature of Bootstrap that can't be modified using va
 ```
 
 After your file is ready, you need to import it into `client/stylesheets/base/global.less`. So, you would add in this statement:
-```
+```less
 @import '@{components}/buttons.import.less';
 ```
 
@@ -86,7 +86,7 @@ Page titles, meta descriptions and Facebook and Twitter meta tags are handled by
 
 * Note: the `spiderable` package will need to be installed and configured on your server in order for bots to read your meta tags.
 
-```
+```javascript
 PostsShowController = AppController.extend({
   path: '/posts/:_id',
   waitOn: function() {
@@ -113,7 +113,7 @@ Upload your image to http://realfavicongenerator.net/ and place the resulting im
 
 You can use the [dburles:factory](https://github.com/percolatestudio/meteor-factory) and [anti:fake](https://github.com/anticoders/meteor-fake/) packages to generate fake collection data for testing your UI. See `server/seeds.js` for an example:
 
-```
+```javascript
 Meteor.startup(function() {
 
   Factory.define('item', Items, {
