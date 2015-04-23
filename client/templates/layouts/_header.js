@@ -1,5 +1,6 @@
 Template._header.rendered = function() {
   Meteor.setTimeout(function() {
+    
     this.$('.dropdown-button').dropdown({
       inDuration: 300,
       outDuration: 225,
@@ -10,6 +11,11 @@ Template._header.rendered = function() {
       belowOrigin: true
     });
 
-    this.$('.button-collapse').sideNav({menuWidth: 240, activationWidth: 70});
+    this.$('.button-collapse').sideNav({
+      menuWidth: 240,
+      activationWidth: 70,
+      closeOnClick: true
+    });
+
   }.bind(this), 200);
 };
