@@ -3,7 +3,8 @@ Router.route('/', {
 });
 
 Router.route('/dashboard', {
-  name: 'dashboard'
+  name: 'dashboard',
+  controller: 'DashboardController'
 });
 
 Router.plugin('ensureSignedIn', {
