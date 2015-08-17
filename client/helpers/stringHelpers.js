@@ -1,4 +1,4 @@
 Template.registerHelper('truncate', function(string, length) {
-  var cleanString = _(string).stripTags();
-  return _(cleanString).truncate(length);
+  var cleanString = s(string).stripTags();
+  return s(cleanString).truncate(length);
 });
