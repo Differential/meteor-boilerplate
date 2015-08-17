@@ -13,7 +13,7 @@ cmather:handlebars-server@0.2.0
 dburles:collection-helpers
 reywood:publish-composite
 momentjs:moment
-mrt:underscore-string-latest
+underscorestring:underscore.string
 matb33:collection-hooks
 dburles:factory
 anti:fake
