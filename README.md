@@ -22,7 +22,7 @@ For our Bootstrap version, see the [master branch](https://github.com/Differenti
   * [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
   * [reywood:publish-composite](https://github.com/englue/meteor-publish-composite)
   * [aldeed:autoform](https://github.com/aldeed/meteor-autoform)
-  * [aldeed:collection2](https://github.com/aldeed/https://github.com/aldeed/meteor-collection2)
+  * [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
 * Router:
   * [iron:router](https://github.com/EventedMind/iron-router)
   * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)
